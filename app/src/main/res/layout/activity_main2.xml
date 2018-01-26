@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@drawable/mp1"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.ashish.maps.Main2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/tv_normal"
+        android:text="Your coordinates are:"
+        android:textSize="30dp"
+        android:paddingTop="5dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="150dp"
+            android:id="@+id/tv_lat1"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:text="Latitude  ->"
+            android:layout_height="40dp" />
+        <TextView
+            android:layout_width="150dp"
+            android:id="@+id/tv_lat2"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:text=""
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="150dp"
+            android:id="@+id/tv_long1"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:text="Longitude ->"
+            android:layout_height="40dp" />
+        <TextView
+            android:layout_width="150dp"
+            android:id="@+id/tv_long2"
+            android:layout_weight="1"
+            android:textSize="30dp"
+            android:text=""
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="100dp"
+            android:id="@+id/tv_rad"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Radius:"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:layout_width="100dp"
+            android:id="@+id/sp_rad"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </Spinner>
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="100dp"
+            android:id="@+id/tv_type"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:text="Type:"
+            android:layout_height="match_parent" />
+        <Spinner
+            android:layout_width="100dp"
+            android:id="@+id/sp_type"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+        </Spinner>
+
+    </LinearLayout>
+    <Button
+        android:fontFamily="casual"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:layout_width="175dp"
+        android:id="@+id/btn_rest"
+        android:text="SHOW ON LIST"
+        android:layout_height="75dp" />
+    <ListView
+
+        android:layout_width="match_parent"
+        android:id="@+id/lv1"
+        android:layout_height="200dp">
+    </ListView>
+
+    <Button
+        android:fontFamily="casual"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_location_on_black_24dp"
+        android:layout_width="175dp"
+        android:id="@+id/btn_map"
+        android:text="Show on map"
+        android:layout_height="50dp" />
+</LinearLayout>
+    </ScrollView>
