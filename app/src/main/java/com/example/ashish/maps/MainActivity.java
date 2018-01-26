@@ -25,7 +25,7 @@ import com.google.android.gms.location.LocationServices;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener,LocationListener {
 
-    //TextView tv_info,tv_lat,tv_long;
+
     EditText ed_lat,ed_long;
     Button btn_loc,btn_nearby;
 
@@ -42,9 +42,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //tv_info= (TextView) findViewById(R.id.tv_info);
-        //tv_lat= (TextView) findViewById(R.id.tv_lat);
-        //tv_long= (TextView) findViewById(R.id.tv_long);
 
         ed_lat= (EditText) findViewById(R.id.ed_lat);
         ed_long= (EditText) findViewById(R.id.ed_long);

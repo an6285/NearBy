@@ -41,7 +41,7 @@ public class Main2Activity extends AppCompatActivity {
 
     ListView lv1;
 
-    String[] rad={"250","500","1000","1500","2000","2500"};
+    String[] rad={"250","500","1000","1500","2000","2500","5000","10000"};
     String[] type={"airport","atm","bank","cafe","doctor","gym","hospital","library","movie_theater","police"
     ,"restaurant","school","shopping_mall","train_station"};
 
@@ -54,6 +54,15 @@ public class Main2Activity extends AppCompatActivity {
     public static final ArrayList<String> todisplay=new ArrayList<String>();
     public static final ArrayList<Double> latitudes=new ArrayList<Double>();
     public static final ArrayList<Double> longitudes=new ArrayList<Double>();
+
+    @Override
+    public void onBackPressed() {
+        names.clear();
+        todisplay.clear();
+        latitudes.clear();
+        longitudes.clear();
+        super.onBackPressed();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +106,10 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View view) {
 
                 url=sbMethod(sp_rad.getSelectedItem().toString(),sp_type.getSelectedItem().toString());
+                names.clear();
+                todisplay.clear();
+                latitudes.clear();
+                longitudes.clear();
                 if(cd.isConnectedToInternet())
                 {
                     new SyncData().execute(url);
@@ -222,4 +235,5 @@ public class Main2Activity extends AppCompatActivity {
         }
         return jsonstr.toString();
     }
+
 }
